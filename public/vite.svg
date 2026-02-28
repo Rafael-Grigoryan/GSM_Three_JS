@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="50" fill="#0a0a0a" stroke="#556b2f" stroke-width="12" />
+  <text x="50%" y="55%" font-family="Impact, Arial Black, sans-serif" font-weight="900" font-size="96" fill="#556b2f" text-anchor="middle" dominant-baseline="middle">GSM</text>
+</svg>

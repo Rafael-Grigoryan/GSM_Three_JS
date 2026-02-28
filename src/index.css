@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+    --bg-dark: #000000;
+    --bg-panel: #0a0a0a;
+    --accent-gold: #c5a059;
+    --accent-khaki: #556b2f;
+    --text-primary: #ffffff;
+    --text-secondary: #999999;
+    --text-gold: #dfb96f;
+
+    --font-head-gent: 'Playfair Display', serif;
+    --font-head-brut: 'Oswald', sans-serif;
+    --font-body: 'Roboto Condensed', sans-serif;
+
+    --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+    --border-gold: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-head-brut);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gentleman-text {
+    font-family: var(--font-head-gent);
+    text-transform: none;
+    font-style: italic;
+    color: var(--accent-gold);
+    letter-spacing: normal;
+}
+
+.brutal-text {
+    font-family: var(--font-head-brut);
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-khaki);
+}
+
+.page-container {
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    padding-top: 130px;
+    /* Navbar space */
+}
+
+/* Animations */
+.hover-gold:hover {
+    color: var(--accent-gold);
+    transition: color 0.3s ease;
+}
+
+.hover-khaki:hover {
+    color: var(--accent-khaki);
+    transition: color 0.3s ease;
+}
+
+.glass-panel {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border: var(--border-subtle);
+}
+
+.btn-brutal {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--accent-khaki);
+    padding: 12px 30px;
+    font-family: var(--font-head-brut);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.btn-brutal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent-khaki);
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.btn-brutal:hover::before {
+    width: 100%;
+}
+
+.btn-gentleman {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 10px 24px;
+    font-family: var(--font-head-gent);
+    font-size: 1.1rem;
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-gentleman:hover {
+    background: rgba(197, 160, 89, 0.1);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+}
+
+.section-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    border-bottom: var(--border-subtle);
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
